@@ -1,12 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	a := 2
-	b := &a
-	*b = 2020
-	fmt.Println(a)
+	names := []string{"Hyejin", "Jisang", "Hangyeol"}
+	names = append(names, "Younggook")
+	fmt.Println(names)
 }
