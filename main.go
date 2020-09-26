@@ -1,15 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-type person struct {
-	name    string
-	age     int
-	favFood []string
-}
+	"github.com/redonearth/learngo/accounts"
+)
 
 func main() {
-	favFood := []string{"Pizza", "Chicken", "Kimchi"}
-	redo := person{name: "redo", age: 33, favFood: favFood}
-	fmt.Println(redo.name)
+	account := accounts.NewAccount("Redo")
+	account.Deposit(10)
+	fmt.Println(account.Balance())
 }
