@@ -11,7 +11,9 @@ func main() {
 	for _, person := range people {
 		go isCool(person, channel)
 	}
+	// Blocking Operation & Concurrency
 	for i := 0; i < len(people); i++ {
+		fmt.Println("Waiting for ", i)
 		fmt.Println(<-channel)
 	}
 
